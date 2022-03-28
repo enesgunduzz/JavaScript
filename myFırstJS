@@ -1,0 +1,27 @@
+function ArrayChallenge(arr) {
+	const mode = {};
+	let max = { ind: -1, val: -1 }
+	let maxInd;
+
+	arr.forEach((a, i) => {
+		if (mode[a]) {
+			mode[a].val++;
+		}
+		else {
+			mode[a] = { ind: i, val: 1 };
+		}
+	});
+	for (let l in mode) {
+		if (mode[l].val > max.val) {
+			max = mode[l];
+			maxInd = l;
+		}
+		else if (mode[l].val == max.val && mode[l].ind < max.ind) {
+			max = mode[l];
+		}
+	}
+
+	return max.val === 1 ? -1 : parseInt(maxInd);
+}
+
+console.log(ArrayChallenge(readline()));
