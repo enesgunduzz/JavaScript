@@ -1,0 +1,188 @@
+// for (i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+// console.log("Bitti");
+
+var sehirler = ["Ankara", "İstanbul", "İzmir", "Adana"];
+
+// for (i = 0; i < sehirler.length; i++) {
+//   console.log(sehirler[i]);
+// }
+
+// var i = 1;
+// while (i <= 10) {
+//   console.log(i);
+//   i++;
+// }
+
+// var i = 1;
+// do {
+//   console.log(i);
+//   i++;
+// } while (i <= 10);
+
+sehirler.forEach(function(sehir){
+    //debugger;
+    console.log(sehir)
+})
+var kullanicilar = [
+    {email:"engindemirog@gmail.com",sifre:"12345"},
+    {email:"derindemirog@gmail.com",sifre:"12345"}
+]
+
+var tivitler = [
+    {email:"engindemirog@gmail.com",tivit:"Bugün hava çok güzel"},
+    {email:"engindemirog@gmail.com",tivit:"Bugün hava çok güzel 2"},
+    {email:"derindemirog@gmail.com",tivit:"Kapıyı ben açacağım!"}
+]
+
+var email = prompt("email?")
+var sifre = prompt("sifre?")
+
+function kullaniciVarmi(email,sifre){
+    console.log(email);
+    console.log(sifre);
+    for(i=0;i<kullanicilar.length;i++){
+        if(kullanicilar[i].email==email && kullanicilar[i].sifre==sifre){
+            return true;
+        }
+    }
+    return false;
+}
+function giris(){
+    if(kullaniciVarmi(email,sifre)){
+        console.log(tivitler)
+    }else{
+        console.log("Kullanıcı adı veya şifresi hatalı")
+    }
+}
+
+giris(email,sifre)
+<html>
+    <head>
+        <!-- <script src="index.js"></script> -->
+        <!-- <script src="dongulerDemo.js"></script> -->
+        <!-- <script src="scope.js"></script> -->
+        <script src="promise.js"></script>
+    </head>
+    <body>
+        Merhaba
+    </body>
+</html>
+class Personel {
+  constructor(ad, soyad) {
+    this.ad = ad;
+    this.soyad = soyad;
+  }
+
+  kaydet() {
+    console.log(`Personel kaydedildi : ${this.ad}`);
+  }
+}
+
+const personel = new Personel("Engin", "Demiroğ");
+
+personel.kaydet();
+
+personel.ad = "Engin";
+console.log(personel.ad);
+
+<html>
+<head>
+    <style type="text/css">
+        .intro1 {
+            background-color: red;
+        }
+
+        .intro2 {
+            background-color: violet;
+        }
+
+        .intro3 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="intro1" id="intro1">İlk paragraf</p>
+    <p class="intro2" id="intro2">İkinci paragraf</p>
+    <p class="intro3" id="intro3">Üçüncü paragraf</p>
+    <ul>
+        <li>Ankara</li>
+        <li class="intro1">İstanbul</li>
+        <li>İzmir</li>
+        <li>Adana</li>
+        <li>Van</li>
+    </ul>
+
+    <p id="mesaj"></p>
+
+    <input type="text" name="musteriAdi" value="Engin Demiroğ">
+    <h1 id="salih">Salih Demiroğ</h1>
+    <h1 id="yazar"></h1>
+    <p class="intro1" id="agac">
+        Ağaç değeri
+    </p>
+    <div id="div1">
+        <p id="p1"> Bu kısım P1</p>
+        <p id="p2"> Bu kısım P2</p>
+    </div>
+    <script src="dom.js"></script>
+</body>
+
+</html>
+//document.getElementById("bio").innerHTML="Derin Demirog : 2014"
+
+// var intro1 = document.getElementById("intro1");
+
+// var mesaj = document.getElementById("mesaj");
+
+// mesaj.innerHTML = intro1.innerHTML;
+
+// var tumListeler = document.getElementsByTagName("ul");
+// var sehirler = tumListeler[0];
+
+// tumElemanlar = sehirler.getElementsByTagName("li");
+
+// for (i = 0; i < tumElemanlar.length; i++) {
+//   alert(tumElemanlar[i].innerHTML);
+// }
+
+//  var classElemanlari = document.getElementsByClassName("intro1");
+
+//  alert(classElemanlari[1].innerHTML);
+//  alert(classElemanlari.length);
+
+// var queryElemanları = document.querySelectorAll("p.intro1");
+// alert(queryElemanları.length);
+
+// var isimElemanlari = document.getElementsByName("musteriAdi");
+// alert(isimElemanlari[0].value);
+
+// var salih = document.getElementById("salih").addEventListener("mouseover",rengiDegistir);
+
+// function rengiDegistir(){
+//     document.getElementById("div1").style.color ="red";
+//     var isimElemanlari = document.getElementsByName("musteriAdi");
+//     isimElemanlari[0].value ="Derin"
+// }
+
+// var node = document.getElementById("agac");
+// alert(node.childNodes[0].nodeValue);
+
+var baslik = document.createElement("h2");
+var node = document.createTextNode("Merhaba JavaScript")
+baslik.appendChild(node)
+
+var div1 = document.getElementById("div1")
+var p2 = document.getElementById("p2")
+
+div1.insertBefore(baslik,p2)
+
+alert("P2 siliniyor")
+div1.removeChild(p2);
+
+alert("Değiştiriliyor");
+var p1 = document.getElementById("p1")
+div1.replaceChild(baslik,p1)
