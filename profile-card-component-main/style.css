@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg"), #19a2ae;
+     background-repeat: no-repeat;
+    background-position: right 52vw bottom 35vh, left 49vw top 49vh;
+
+}
+
+.container {
+    width: 350px;
+    height: 390px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.name {
+    height: 140px;
+    width: 350px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.name p:nth-child(2){
+    opacity: 0.6;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.name span {
+    opacity: 0.6;
+}
+.name p {
+    text-align: center;
+    transform: translateY(80px);
+    margin: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+.footer p:nth-child(2) {
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.photo {
+    position: relative;
+    left: 130px;
+    top: -265px;
+}
+.photo img {
+    border-radius: 50%;
+    border: none;
+    outline: 5px solid white;
+}
