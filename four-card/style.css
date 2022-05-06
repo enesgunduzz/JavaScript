@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+p:not(.top p){
+    font-size: 15px;
+    margin-top: 4px;
+    margin-bottom: 35px;
+    opacity: 0.4;
+}
+h3 {
+    font-size: 24px;
+}
+.top{
+    text-align: center;
+    margin: 20px;
+}
+.top h2:first-child{
+    font-weight: 400;
+    font-size: 24px;
+}
+.top h2:not(h2:first-child) {
+    font-weight: 900;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 20px;
+    gap: 40px;
+    margin: 0 auto;
+}
+.image {
+    text-align: right;
+}
+.Supervisor {
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+.box {
+    box-shadow: 0 3px 20px 0.5px hsla(229, 6%, 66%, 0.4);
+    box-shadow: 0 12px 10px 0.5px hsla(229, 6%, 66%, 0.4);
+    padding: 18px;
+    border-radius: 5px;
+}
+.team {
+    border-top:5px solid hsl(0, 78%, 62%);
+    margin-bottom: 40px;
+    width: 100%;
+}
+.karma {
+    border-top: 5px solid hsl(34, 97%, 64%);
+    width: 100%;
+}
+.Calculator {
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+@media (min-width:800px) {
+    .container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
